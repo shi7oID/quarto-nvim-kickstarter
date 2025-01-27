@@ -7,6 +7,10 @@ P = vim.print
 vim.g['quarto_is_r_mode'] = nil
 vim.g['reticulate_running'] = false
 
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("v", "jk", "<Esc>")
+
+
 local nmap = function(key, effect)
   vim.keymap.set('n', key, effect, { silent = true, noremap = true })
 end

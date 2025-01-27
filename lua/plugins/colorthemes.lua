@@ -29,10 +29,21 @@ return {
       vim.api.nvim_set_hl(0, 'TermCursor', { fg = '#A6E3A1', bg = '#A6E3A1' })
     end,
   },
+  
+  {
+    "brennanwilkes/pop-punk.vim",
+    enabled = true,         -- Включаем плагин (не забывайте, что некоторые из ваших схем включены, а некоторые выключены)
+    lazy = false,           -- Чтобы загрузить сразу при старте Neovim, если хотите сделать её основной темой
+    priority = 1000,        -- Чтобы она загрузилась до всех остальных плагинов
+    config = function()
+    -- Устанавливаем саму тему
+      vim.cmd("colorscheme pop-punk")
+    end,
+  },
 
   {
     'rebelot/kanagawa.nvim',
-    enabled = true,
+    enabled = false,
     lazy = false,
     priority = 1000,
     config = function()

@@ -1,5 +1,8 @@
 -- global options
 
+vim.opt.relativenumber = true
+vim.opt.nu = true
+
 local animals = require('misc.style').animals
 
 -- proper colors
@@ -27,7 +30,7 @@ vim.opt.shortmess:append 'A'
 vim.opt.showmode = false
 
 -- use less indentation
-local tabsize = 2
+local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
@@ -98,7 +101,7 @@ vim.opt.formatoptions:remove 'r'
 vim.opt.formatoptions:remove 'o'
 
 -- scroll before end of window
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 8
 
 -- (don't == 0) replace certain elements with prettier ones
 vim.opt.conceallevel = 0
@@ -108,13 +111,6 @@ vim.diagnostic.config {
   virtual_text = true,
   underline = true,
   signs = true,
-}
-
--- add new filetypes
-vim.filetype.add {
-  extension = {
-    ojs = 'javascript',
-  },
 }
 
 -- additional builtin vim packages
